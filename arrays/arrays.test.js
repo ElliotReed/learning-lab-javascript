@@ -1,5 +1,5 @@
 const chai = require('chai');
-const { assert } = chai;
+const { assert, expect } = chai;
 const app = require('./app');
 
 const smallNumberArray = [2, 3, 4]
@@ -17,10 +17,10 @@ describe('array exercises', function () {
   });
 
   describe('forLoopBreak()', function () {
-    it('should increase the array values by 1', function () {
-      let result = app.forLoopBreak(numberArray, 1)
+    it("should return an array of strings before 'Becky'", function () {
+      let result = app.forLoopBreak(stringArray)
       assert.typeOf(result, 'array');
-      assert.deepEqual(result, [22, 56, 70, 420, 18, 42]);
+      assert.deepEqual(result, ["Emile Reed", "Eleanor Reed", "Becky", "Elliot"]);
     });
   });
 
